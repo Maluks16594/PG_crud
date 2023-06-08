@@ -1,0 +1,15 @@
+<h1>Hire a Driver</h1>
+<form (submit)="Driver()">
+  <label for="name">Driver Name:</label>
+  <input type="text" id="name" [(ngModel)]="driverName" required>
+  
+  <label for="experience">Driver Experience (in years):</label>
+  <input type="number" id="experience" [(ngModel)]="driverExperience" required>
+  
+  <button type="submit">Hire Driver</button>
+</form>
+<div *ngIf="hiredDriver">
+  <h2>Driver Hired!</h2>
+  <p>Driver Name: {{ hiredDriver.name }}</p>
+  <p>Driver Experience: {{ hiredDriver.experience }} years</p>
+</div>
